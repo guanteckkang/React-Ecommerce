@@ -1,0 +1,48 @@
+import goldbar from "../img/goldbar.png";
+export const itemlist = [
+  {
+    id: 1,
+    name: "1 Grams Gold Bar",
+    description: "Malaysia Gold Bar 99.99% casting",
+    weight: "1 Grams",
+    price: "250.00",
+    pricetag: 250,
+    img: goldbar,
+  },
+  {
+    id: 2,
+    name: "10 Grams Gold Bar",
+    description: "Malaysia Gold Bar 99.99% casting",
+    weight: "10 Grams",
+    price: "2,500.00",
+    pricetag: 2500,
+    img: goldbar,
+  },
+  {
+    id: 3,
+    name: "100 Grams Gold Bar",
+    description: "Malaysia Gold Bar 99.99% casting",
+    weight: "100 Grams",
+    price: "25,000.00",
+    pricetag: 25000,
+    img: goldbar,
+  },
+  {
+    id: 4,
+    name: "1,000 Grams Gold Bar",
+    description: "Malaysia Gold Bar 99.99% casting",
+    weight: "1,000 Grams",
+    price: "250,000.00",
+    pricetag: 250000,
+    img: goldbar,
+  },
+  {
+    id: 5,
+    name: "10,000 Grams Gold Bar",
+    description: "Malaysia Gold Bar 99.99% casting",
+    weight: "10,000 Grams",
+    price: "2,500,000.00",
+    pricetag: 2500000,
+    img: goldbar,
+  },
+];

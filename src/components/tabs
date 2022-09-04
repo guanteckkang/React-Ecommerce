@@ -1,0 +1,24 @@
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+
+export default function Tabbar() {
+  return (
+    <div>
+      <Tabs
+        defaultActiveKey="profile"
+        id="uncontrolled-tab-example"
+        className="mb-3"
+      >
+        <Tab eventKey="home" title="Home">
+          <h1>Test 1</h1>
+        </Tab>
+        <Tab eventKey="profile" title="Profile">
+          <h2>Test 2</h2>
+        </Tab>
+        <Tab eventKey="contact" title="Contact">
+          <h3>Test 3</h3>
+        </Tab>
+      </Tabs>
+    </div>
+  );
+}

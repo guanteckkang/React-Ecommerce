@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+body ::-webkit-scrollbar {
+  display: none;
+}
+#tabdiv {
+  width: 90%;
+  margin: 20px;
+}
+
+#cardlist {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 20px;
+  justify-content: center;
+}
+@media only screen and (max-width: 1000px) {
+  #cardlist {
+    grid-template-columns: repeat(3, 280px);
+  }
+}
+#cardid {
+  width: 300px;
+  border: none;
+  border: 1px solid black;
+}
+#cartlist {
+  margin: 30px auto;
+  table-layout: fixed;
+}
+#productimg {
+  width: 100px;
+}
+.quantity {
+  width: 50px;
+}
