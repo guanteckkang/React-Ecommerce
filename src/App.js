@@ -27,7 +27,7 @@ export default function App() {
             <h1>List of Products</h1>
             <Product cart={cart} setCart={setCart} />
           </Tab>
-          <Tab eventKey="cart" title="cart">
+          <Tab eventKey="cart" title={"Cart " + `${cart.length}`}>
             <h1>List of Carts</h1>
             <Cart cart={cart} setCart={setCart} />
           </Tab>

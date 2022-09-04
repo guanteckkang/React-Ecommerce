@@ -27,7 +27,6 @@ body ::-webkit-scrollbar {
 #cardid {
   width: 300px;
   border: none;
-  border: 1px solid black;
 }
 #cartlist {
   margin: 30px auto;

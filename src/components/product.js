@@ -31,7 +31,7 @@ function ProductButton({ list, cart, setCart }) {
   // function plus
   function plus() {
     setCount(count + 1);
-    let filter = cart.find((e) => e.id == list.id);
+    let filter = cart.find((e) => e.id === list.id);
     if (filter === undefined) {
       setCart((e) => [
         ...e,
@@ -46,7 +46,7 @@ function ProductButton({ list, cart, setCart }) {
       ]);
     } else {
       var result = cart.map((e) =>
-        e.id == list.id
+        e.id === list.id
           ? {
               ...e,
               quantity: filter.quantity + 1,
@@ -59,33 +59,22 @@ function ProductButton({ list, cart, setCart }) {
   }
   // function minus
   function minus() {
-    if (count === 0) {
-    } else if (count >= 1) {
+    if (count === 0) return;
+    if (count >= 1) {
       setCount(count - 1);
-      let filter = cart.find((e) => e.id == list.id);
+      let filter = cart.find((e) => e.id === list.id);
       var result = cart.map((e) =>
-        e.id == list.id
+        e.id === list.id
           ? {
               ...e,
               quantity: filter.quantity - 1,
               sum: filter.sum - list.pricetag,
             }
-          : {}
+          : e
       );
     }
-
-    // if (cart.quantity === undefined) return;
-    // if (cart.quantity >= 1) {
-    //   var result = cart.map((e) =>
-    //     e.id == list.id
-    //       ? {
-    //           ...e,
-    //           quantity: filter.quantity - 1,
-    //           sum: filter.sum - list.pricetag,
-    //         }
-    //       : e
-    //   );
-    setCart(result);
+    var filter = result.filter((e) => e.quantity > 0);
+    setCart(filter);
   }
   return (
     <>
